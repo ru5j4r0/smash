@@ -33,7 +33,7 @@ Just add one line to load smash as below, and you're ready!
 source ~/.local/share/smash/smash.bash 2> /dev/null || source <(curl -Ls "https://smash.ru5j4r0.dev")
 
 # Import modules you want to use
-import module1 module2 ...
+import moduleA moduleB ...
 
 # ↓ Your scripts ↓
 ```
