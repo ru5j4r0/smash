@@ -10,7 +10,7 @@ You would bash, now you smash.
 source ~/.local/share/smash/smash.bash 2> /dev/null || source <(curl -Ls "https://smash.ru5j4r0.dev")
 import colored-echo
 
-colored-echo red 'Smash the world!'
+colored-echo green 'Smash the world!'
 ```
 
 ## Features
@@ -26,11 +26,11 @@ Just add one line to load smash as below, and you're ready!
 ```bash
 #!/usr/bin/env bash
 
+# If you want to load smash quietly, add a line as below
+# SMASH_QUIET=
+
 # Load smash
 source ~/.local/share/smash/smash.bash 2> /dev/null || source <(curl -Ls "https://smash.ru5j4r0.dev")
-
-# Or if you want to load smash quietly
-# SMASH_QUIET= source ~/.local/share/smash/smash.bash 2> /dev/null || source <(curl -Ls "https://smash.ru5j4r0.dev")
 
 # Import modules you want to use
 import module1 module2 ...
