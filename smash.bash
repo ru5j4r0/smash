@@ -1,6 +1,7 @@
 if test ! -v SMASH_QUIET; then
 echo -e '\033[0;32mStart loading smash...\033[0;0m'
 fi
+SMASH_ORIGINAL_DIR=$PWD
 mkdir -p ~/.local/share/ ~/.local/bin/
 cd ~/.local/share/||(echo '\033[0;31m [Error] Failed to load smash.\033[0;0m'&&exit 1)
 if test -d smash; then
@@ -17,6 +18,8 @@ chmod 744 bin/*
 ln -s "$PWD"/bin/* "$HOME"/.local/bin/
 echo "$PATH"|grep '\.local/bin'>/dev/null||echo '\033[0;33m [Warn] You should add "~/.local/bin" to your PATH\033[0;0m'
 fi
+cd "$SMASH_ORIGINAL_DIR"||(echo '\033[0;31m [Error] Failed to load smash.\033[0;0m'&&exit 1)
+unset SMASH_ORIGINAL_DIR
 if test ! -v SMASH_QUIET; then
 echo -e '\033[0;32mFinished loading smash!\033[0;0m'
 fi
