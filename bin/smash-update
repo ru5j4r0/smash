@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if test ! -d ~/.local/share/smash/; then
+	echo 'smash is not installed'
+	exit 1
+fi
+
+cd ~/.local/share/smash/ || exit 1
+git pull

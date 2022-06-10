@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+if test -d ~/.local/share/smash/; then
+	rm -rf ~/.local/share/smash/
+fi
+
+if test -L ~/.local/bin/smash-update; then
+	unlink ~/.local/bin/smash-update
+fi
+
+if test -L ~/.local/bin/smash-uninstall; then
+	unlink ~/.local/bin/smash-uninstall
+fi
