@@ -16,7 +16,9 @@ cd smash||(echo -e '\033[0;31m [Error] Failed to load smash.\033[0;0m'&&exit 1)
 date +%w>.smash_last_updated
 chmod 744 bin/*
 ln -s "$PWD"/bin/* "$HOME"/.local/bin/
+if test ! -v SMASH_QUIET; then
 echo "$PATH"|grep '\.local/bin'>/dev/null||echo -e '\033[0;33m [Warn] You should add "~/.local/bin" to your PATH\033[0;0m'
+fi
 fi
 cd "$SMASH_ORIGINAL_DIR"||(echo -e '\033[0;31m [Error] Failed to load smash.\033[0;0m'&&exit 1)
 unset SMASH_ORIGINAL_DIR
