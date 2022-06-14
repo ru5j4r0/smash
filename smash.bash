@@ -8,7 +8,7 @@ if test -d smash; then
 cd smash||(echo '\033[0;31m [Error] Failed to load smash.\033[0;0m'&&exit 1)
 if test "$(date +%w)" != "$(cat .smash_last_updated)"; then
 date +%w>.smash_last_updated
-git pull
+git pull -q
 fi
 else
 git clone -q git@github.com:ru5j4r0/smash.git
