@@ -23,6 +23,8 @@ unset SMASH_ORIGINAL_DIR
 if test ! -v SMASH_QUIET; then
 echo -e '\033[0;32mFinished loading smash!\033[0;0m'
 fi
+SMASH_ARG_COUNT=$#
+readonly SMASH_ARG_COUNT
 function import() {
 for module in "$@"; do
 if test ! -v SMASH_MODULE_"${module//-/_}"; then
