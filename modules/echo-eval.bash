@@ -1,6 +1,6 @@
 import colored-echo
 
-function echo-run() {
+function echo-eval() {
 	colored-echo green "Running \"$*\" ..."
-	"$@"
+	eval "$@"
 }
