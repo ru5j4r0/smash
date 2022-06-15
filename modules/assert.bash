@@ -11,7 +11,7 @@ function smash-unset-context() {
 function assert() {
 	coproc CAT { cat; }
 	{
-		"$@"
+		eval "$@"
 		local -r res=$?
 		echo 1>&2
 	} 2>&"${CAT[1]}"
