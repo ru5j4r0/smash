@@ -1,6 +1,6 @@
 import colors
 
-function colored-echo() {
+function colored-print() {
 	if test "$1" = 'light'; then
 		shift
 		local -r c=${SMASH_LIGHT_COLORS["$1"]}
@@ -8,5 +8,5 @@ function colored-echo() {
 		local -r c=${SMASH_NORMAL_COLORS["$1"]}
 	fi
 	shift
-	echo -e "\033[0;${c}m$*\033[0;0m"
+	printf "\033[0;%dm$*\033[0;0m" "$c"
 }

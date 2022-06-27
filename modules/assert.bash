@@ -28,9 +28,9 @@ function assert() {
 
 	if test $res -ne 0; then
 		if test -n "$SMASH_CONTEXT"; then
-			echo-err " [Error] During $SMASH_CONTEXT:"
+			echo-err "[Error] During $SMASH_CONTEXT:"
 		else
-			echo-err ' [Error] An error occurred:'
+			echo-err '[Error] An error occurred:'
 		fi
 		echo-err "\tFailed command: $*"
 		if test -n "${errs[0]}"; then
